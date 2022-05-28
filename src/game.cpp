@@ -250,6 +250,7 @@ void doBackground() {
 	}
 }
 
+//keyboard
 static void doKeydown(SDL_KeyboardEvent* _event) 
 {
     if(_event->repeat == 0) 
