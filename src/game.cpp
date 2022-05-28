@@ -181,7 +181,7 @@ void spawnEnemy()
         Enemy anEnemy;
 
 		anEnemy.SetX(SCREEN_WIDTH);
-		anEnemy.SetY( 100 + rand() % (SCREEN_HEIGHT - 120) );
+		anEnemy.SetY( 100 + rand() % (SCREEN_HEIGHT - 200) );
         anEnemy.SetWidthHeight(enemyTexture);
 
         enemyList.push_back( anEnemy );

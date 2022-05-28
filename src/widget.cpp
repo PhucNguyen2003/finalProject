@@ -31,7 +31,7 @@ static void initAudio()
     {
         //Play the music
         Mix_PlayMusic( music, -1 );
-        // Mix_VolumeMusic(16);
+        Mix_VolumeMusic(64);
     }
 
     sound[SND_MOVE_CHOICE] = Mix_LoadWAV("res/sound/move_choice.wav");

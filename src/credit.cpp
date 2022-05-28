@@ -16,7 +16,9 @@ const int MAX_LINE = 20;
 std::string textBlock[MAX_LINE] =  
 {
     "                                  - visual -                                   ",
-    "                                                                               ",
+    "     - spaceship -                                                             ",
+    "Lunar Lander Asset by Matt Walkden                                             ",
+    "https://mattwalkden.itch.io/lunar-battle-pack                                  ",
     "                                                                               ",
     "                                  - music -                                    ",
     "                                                                               ",
@@ -33,8 +35,7 @@ std::string textBlock[MAX_LINE] =
     "                                                                               ",
     "                                                                               ",
     "                                                                               ",
-    "                                                                               ",
-    "                           - Thank you for playing -                           ",
+    "                           - Thank you for playing -                           "
 };
 
 static void clear() 

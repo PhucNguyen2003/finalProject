@@ -46,10 +46,7 @@ static void doInput() {
 	{
 		if(event.type == SDL_QUIT) 
         {
-            while(!gameStack.empty()) 
-            {
-                gameStack.pop();
-            }
+            gameStack.push(QUIT);
             quit = true;
         }
         if(event.type == SDL_KEYDOWN) 
