@@ -1,0 +1,396 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-w64-mingw32
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sat May 28 17:56:34 2022
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# makefile
+MAKEFLAGS = pqrR
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+# environment
+HOMEDRIVE = C:
+# automatic
+@F = $(notdir $@)
+# automatic
+^D = $(patsubst %/,%,$( 
+patsubst %\,%,$(dir $^)))
+# makefile
+CURDIR := c:/Users/PV/OneDrive/Documents/ehhhh/game3
+# default
+SHELL := sh.exe
+# environment
+WINDIR = C:\Windows
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ONEDRIVE = C:\Users\PV\OneDrive
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# makefile (from 'makefile', line 1)
+MAKEFILE_LIST :=  makefile
+# environment
+TMP = C:\Users\PV\AppData\Local\Temp
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+PROGRAMW6432 = C:\Program Files
+# makefile (from 'makefile', line 2)
+OBJS = src/*.cpp
+# environment
+PROGRAMDATA = C:\ProgramData
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-ef69de32-1629-4274-99db-016a995e19af-sock
+# environment
+VSCODE_CWD = C:\Users\PV\AppData\Local\Programs\Microsoft VS Code
+# default
+MAKE_HOST := x86_64-w64-mingw32
+# environment
+PATH = C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Users\PV\OneDrive\Documents\SDL2-2.0.20\x86_64-w64-mingw32\bin;C:\Program Files\CMake\bin;C:\msys64\mingw64\bin;C:\Users\PV\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\PV\AppData\Local\Programs\Python\Python310\;C:\Users\PV\AppData\Local\Microsoft\WindowsApps;C:\Users\PV\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\PV\OneDrive\Documents\mingw64\bin;C:\Users\PV\OneDrive\Documents\SDL2-2.0.20\x86_64-w64-mingw32\bin;
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# environment
+ZES_ENABLE_SYSMAN = 1
+# environment
+PROCESSOR_ARCHITECTURE = AMD64
+# environment
+USERPROFILE = C:\Users\PV
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+VSCODE_LOG_STACK = false
+# environment
+NUMBER_OF_PROCESSORS = 8
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from 'makefile', line 8)
+INCLUDE_PATHS = -ISDL2\include
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync
+# automatic
+%F = $(notdir $%)
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_3688_LDHFZFWRPZBAVFNL
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+COMPUTERNAME = DESKTOP-9K51PE6
+# environment
+PROGRAMFILES = C:\Program Files
+# default
+.LOADED := 
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# makefile (from 'makefile', line 19)
+LINKER_FLAGS = -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
+# environment
+USERNAME = PV
+# environment
+PUBLIC = C:\Users\Public
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\PV\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+COMMONPROGRAMFILES = C:\Program Files\Common Files
+# environment
+LOGONSERVER = \\DESKTOP-9K51PE6
+# environment
+ONEDRIVECONSUMER = C:\Users\PV\OneDrive
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+USERDOMAIN = DESKTOP-9K51PE6
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# makefile (from 'makefile', line 16)
+COMPILER_FLAGS = -w -Wl,-subsystem,windows
+# makefile (from 'makefile', line 5)
+CC = g++
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+.DEFAULT_GOAL := all
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# environment
+LOCALAPPDATA = C:\Users\PV\AppData\Local
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := make.exe
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+# environment
+OS = Windows_NT
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\35e4c8e341018e2fa2cc223d3949f234-1.67.2-main-sock
+# environment
+HOMEPATH = \Users\PV
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+PROMPT = $P$G
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+# environment
+SYSTEMROOT = C:\Windows
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# automatic
++F = $(notdir $+)
+# environment
+APPDATA = C:\Users\PV\AppData\Roaming
+# environment
+TEMP = C:\Users\PV\AppData\Local\Temp
+# environment
+COMSPEC = C:\Windows\system32\cmd.exe
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# makefile (from 'makefile', line 11)
+LIBRARY_PATHS = -LSDL2\lib
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+SYSTEMDRIVE = C:
+# environment
+SESSIONNAME = Console
+# environment
+PROCESSOR_REVISION = 9e0a
+# environment
+MOZ_PLUGIN_PATH = C:\Program Files (x86)\Foxit Software\Foxit PDF Reader\plugins\
+# makefile (from 'makefile', line 22)
+OBJ_NAME = SDL2/bin/Hero
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+VSCODE_PID = 3688
+# environment
+USERDOMAIN_ROAMINGPROFILE = DESKTOP-9K51PE6
+# variable set hash-table stats:
+# Load=100/1024=10%, Rehash=0, Collisions=18/133=14%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (key c:/Users/PV/OneDrive/Documents/ehhhh/game3, mtime 1653730878): 9 files, no impossibilities.
+# src (key c:/Users/PV/OneDrive/Documents/ehhhh/game3/src, mtime 1653725292): 16 files, no impossibilities.
+
+# 25 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+src/gamestack.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/highScore.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:38:49
+#  File has been updated.
+#  Successfully updated.
+
+all: src/highScore.cpp src/main.cpp src/initSDL.cpp src/utility.cpp src/game.cpp src/ammo.cpp src/player.cpp src/widget.cpp src/credit.cpp src/render.cpp src/gamestack.cpp src/spiteAnimate.cpp src/baseObject.cpp src/enemy.cpp
+#  Command line target.
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := src/highScore.cpp src/main.cpp src/initSDL.cpp src/utility.cpp src/game.cpp src/ammo.cpp src/player.cpp src/widget.cpp src/credit.cpp src/render.cpp src/gamestack.cpp src/spiteAnimate.cpp src/baseObject.cpp src/enemy.cpp
+# automatic
+# | := 
+# automatic
+# < := src/highScore.cpp
+# automatic
+# ^ := src/highScore.cpp src/main.cpp src/initSDL.cpp src/utility.cpp src/game.cpp src/ammo.cpp src/player.cpp src/widget.cpp src/credit.cpp src/render.cpp src/gamestack.cpp src/spiteAnimate.cpp src/baseObject.cpp src/enemy.cpp
+# automatic
+# ? := src/highScore.cpp src/main.cpp src/initSDL.cpp src/utility.cpp src/game.cpp src/ammo.cpp src/player.cpp src/widget.cpp src/credit.cpp src/render.cpp src/gamestack.cpp src/spiteAnimate.cpp src/baseObject.cpp src/enemy.cpp
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/19=11%
+#  recipe to execute (from 'makefile', line 26):
+	$(CC) $(OBJS) $(INCLUDE_PATHS) $(LIBRARY_PATHS) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o $(OBJ_NAME) && start $(OBJ_NAME).exe
+
+# Not a target:
+src/ammo.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/spiteAnimate.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/widget.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 16:36:30
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/initSDL.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/enemy.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/game.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/credit.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/baseObject.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/player.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/utility.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/render.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-28 15:08:12
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=18/1024=2%, Rehash=0, Collisions=0/44=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 40 / st 
+orage = 456 B / avg = 11 B
+# current buf: size = 8162 B / used = 456 B / count = 40 / avg = 11 B
+
+# strcache performance: lookups = 49 / hit rate = 18%
+# hash-table stats:
+# Load=40/8192=0%, Rehash=0, Collisions=2/49=4%
+# Finished Make data base on Sat May 28 17:56:34 2022
+
+ 
