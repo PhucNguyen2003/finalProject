@@ -34,7 +34,6 @@ std::string textBlock[MAX_LINE] =
     "                                                                               ",
     "                                                                               ",
     "                                                                               ",
-    "                                                                               ",
     "                           - Thank you for playing -                           "
 };
 
