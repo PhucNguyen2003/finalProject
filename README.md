@@ -8,7 +8,7 @@
 Đây là một dự án lập trình game dành cho cuối kỳ môn lập trình nâng cao.
 Game Hero là một game bắn quái vật lấy cảm hứng từ thể loại Shoot 'em up. Người chơi sẽ tiêu diệt quái vật để dành điểm số và cố gắng đứng đầu bảng thành tích
 
-Video demo: 
+Video demo: https://youtu.be/dyge7_WwLLM
 ## Technologies
 Game được xây dựng bằng:
 * Ngôn ngữ lập trình C++
