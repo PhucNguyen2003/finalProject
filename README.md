@@ -20,7 +20,7 @@ Với các kỹ thuật được sử dụng:
 * Pointer, cấp phát và giải phóng bộ nhớ động
 ## Setup
 Để tải và chạy dự án này cần có gnu compiler để biên dịch ngôn ngữ C++
-Các bước:
+Các bước tải gnu có thể xem ở: https://www.youtube.com/watch?v=0HD0pqVtsmw&t
 * Tải và giải nén file zip của repository này, hoặc sử dụng git bash để clone file này về bằng câu lệnh
 ```
 git clone 
