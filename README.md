@@ -38,6 +38,7 @@ g++ src/*.cpp -ISDL2\include -LSDL2\lib -w -Wl,-subsystem,windows -lmingw32 -lSD
 ##Conclusion
 
   Đây là dự án đầu, vì còn thiếu kinh nghiệm trong quản lý code cũng như cách xử lý code theo hướng đối tượng, nên các lớp và hàm trong các module có chồng chéo và xây dựng không hợp lý
+  
   Hướng phát triển
  * Lưu lại điểm tối đa bằng file
  * Xây dựng lại một số lớp
