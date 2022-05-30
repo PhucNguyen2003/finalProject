@@ -42,4 +42,4 @@ g++ src/*.cpp -ISDL2\include -LSDL2\lib -w -Wl,-subsystem,windows -lmingw32 -lSD
   Hướng phát triển
  * Lưu lại điểm tối đa bằng file
  * Xây dựng lại một số lớp
- * Xử dụng con trỏ
+ * Sử dụng con trỏ để không bị thất thoát bộ nhớ
