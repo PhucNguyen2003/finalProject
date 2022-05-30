@@ -35,7 +35,7 @@ cd {đường dẫn}
 ```
 g++ src/*.cpp -ISDL2\include -LSDL2\lib -w -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -o SDL2/bin/Hero && start SDL2/bin/Hero.exe
 ```
-##Conclusion
+## Conclusion
 
   Đây là dự án đầu, vì còn thiếu kinh nghiệm trong quản lý code cũng như cách xử lý code theo hướng đối tượng, nên các lớp và hàm trong các module có chồng chéo và xây dựng không hợp lý
   
