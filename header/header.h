@@ -17,6 +17,7 @@
 #include <math.h>
 #include <string>
 #include <stack>
+#include <fstream>
 
 //constant
 const int SCREEN_WIDTH = 1280;

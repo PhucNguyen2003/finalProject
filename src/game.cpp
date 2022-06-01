@@ -632,6 +632,16 @@ static void draw()
 
 static void pushHighScore() 
 {
+    std::fstream _file;
+    
+    _file.open("src/highScore.txt", std::ios::in);
+    if(_file.is_open()) {
+        for(int i = 0; i < 8; i++) {
+            _file >> highScoreList[i];
+        }
+    }
+    _file.close();
+
     for(int i = 0; i < 8; i++) 
     {
         if(highScoreList[i] < score) 
@@ -641,6 +651,15 @@ static void pushHighScore()
             score = temp;
         }
     }
+
+    _file.open("src/highScore.txt", std::ios::out);
+    if(_file.is_open()) {
+        for(int i = 0; i < 8; i++) {
+            _file << highScoreList[i] << '\n';
+        }
+    }
+    _file.close();
+
 }
 
 //main game
