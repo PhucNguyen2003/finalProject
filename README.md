@@ -41,6 +41,7 @@ Các kỹ thuật lập trình được sử dụng:
 * Tách hàm, tách file và quản lý các module theo file .cpp và file .h 
 * Sử dụng thư viện đồ họa SDL2, SDL_image, SDL_mixer, SDL_ttf
 * Log và báo cáo lỗi
+* Xuất và nhập file .txt
 
 ### 2.3 Xử lý trong game
 * Sinh ra và di chuyển
