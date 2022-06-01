@@ -97,15 +97,17 @@ static void logic()
 static bool drawText() 
 {
     SDL_Color aColor = {255, 211, 0};
-    SDL_Texture* aTexture;
+    SDL_Texture* _texture;
     for(int i = 0; i < MAX_LINE; i++) 
     {
-        aTexture = loadTextTexture(textBlock[i], aColor, smallFont);
-        applyTexture(aTexture, SCREEN_WIDTH / 20, SCREEN_HEIGHT / 20 + i * 20);
+        _texture = loadTextTexture(textBlock[i], aColor, smallFont);
+        applyTexture(_texture, SCREEN_WIDTH / 20, SCREEN_HEIGHT / 20 + i * 20);
+
+        SDL_DestroyTexture(_texture);
     }
 
-    SDL_DestroyTexture(aTexture);
-    aTexture = NULL;
+    SDL_DestroyTexture(_texture);
+    _texture = NULL;
 }
 
 static void draw() 

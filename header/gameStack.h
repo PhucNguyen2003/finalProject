@@ -1,7 +1,7 @@
 #ifndef GAME_STACK_H_
 #define GAME_STACK_H_
 
-#include "../header/header.h"
+#include "header.h"
 
 //stack design for the whole application
 extern std::stack<int> gameStack;

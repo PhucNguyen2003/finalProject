@@ -1,7 +1,7 @@
 #ifndef INITSDL_H_
 #define INITSDL_H_
 
-#include "../header/header.h"
+#include "header.h"
 
 //initialize sdl and some of its components
 bool init();

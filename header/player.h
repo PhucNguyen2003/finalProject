@@ -1,8 +1,8 @@
 #ifndef PLAYER_H_
 #define PLAYER_H_
 
-#include "../header/header.h"
-#include "../header/baseObject.h"
+#include "header.h"
+#include "baseObject.h"
 
 class Player : public BaseObject {
 public:

@@ -24,13 +24,13 @@ SDL_Texture* loadTexture(std::string path)
 	SDL_SetColorKey( loadSurface, SDL_TRUE, SDL_MapRGB( loadSurface->format, 255, 255, 255 ) );
 
 	//load texture
-	SDL_Texture* newTexture = SDL_CreateTextureFromSurface(renderer, loadSurface);
+	SDL_Texture* _texture = SDL_CreateTextureFromSurface(renderer, loadSurface);
 
 	//free loaded surface
 	SDL_FreeSurface(loadSurface);
 	loadSurface = NULL;
 
-	return newTexture;
+	return _texture;
 }
 
 void applyTexture(SDL_Texture *texture, int x, int y)

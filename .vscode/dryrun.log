@@ -1,5 +1,5 @@
-make.exe --dry-run --keep-going --print-directory
+make.exe --dry-run --always-make --keep-going --print-directory
 make.exe: Entering directory 'c:/Users/PV/OneDrive/Documents/ehhhh/game3'
-g++ src/*.cpp -ISDL2\include -LSDL2\lib -w -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -o SDL2/bin/Hero && start SDL2/bin/Hero.exe
+g++ src/*.cpp -ISDL2\include -I header -LSDL2\lib -w -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -o SDL2/bin/Hero && start SDL2/bin/Hero.exe
 make.exe: Leaving directory 'c:/Users/PV/OneDrive/Documents/ehhhh/game3'
  

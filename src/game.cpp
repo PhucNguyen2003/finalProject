@@ -115,14 +115,14 @@ static void initTexture()
         quit = true;
     }
 
-    enemyAmmoTexture = loadTexture("res/images/enemyBullet.png");
-    if(enemyAmmoTexture == NULL) 
+    enemyTexture = loadTexture("res/images/Emissary.png");
+    if(enemyTexture == NULL) 
     {
         quit = true;
     }
 
-    enemyTexture = loadTexture("res/images/Emissary.png");
-    if(enemyTexture == NULL) 
+    enemyAmmoTexture = loadTexture("res/images/enemyBullet.png");
+    if(enemyAmmoTexture == NULL) 
     {
         quit = true;
     }
@@ -178,13 +178,13 @@ void spawnEnemy()
 
     if (--enemySpawnTimer <= 0)
 	{
-        Enemy anEnemy;
+        Enemy _enemy;
 
-		anEnemy.SetX(SCREEN_WIDTH);
-		anEnemy.SetY( 100 + rand() % (SCREEN_HEIGHT - 200) );
-        anEnemy.SetWidthHeight(enemyTexture);
+		_enemy.SetX(SCREEN_WIDTH);
+		_enemy.SetY( 100 + rand() % (SCREEN_HEIGHT - 200) );
+        _enemy.SetWidthHeight(enemyTexture);
 
-        enemyList.push_back( anEnemy );
+        enemyList.push_back( _enemy );
 
 		enemySpawnTimer = 30 + (rand() % ( FPS * 2 ) );
 	}
@@ -211,6 +211,8 @@ static void clear()
     lifepointTexture = NULL;
     SDL_DestroyTexture(explosionTexture);
     explosionTexture = NULL;
+    SDL_DestroyTexture(bannerTexture);
+    bannerTexture = NULL;
 
     enemyList.clear();
     enemyAmmoList.clear();
@@ -277,13 +279,13 @@ static void doKeydown(SDL_KeyboardEvent* _event)
 
         if(_event->keysym.sym == SDLK_SPACE && --player->reload <= 0) 
         {
-            Ammo anAmmo;
+            Ammo _ammo;
 
-            anAmmo.SetWidthHeight( playerAmmoTexture );
-            anAmmo.SetX( player->GetX() + player->GetWidth() - 10);
-            anAmmo.SetY( player->GetY() + (player->GetHeight() / 2 - anAmmo.GetHeight() / 2) );
+            _ammo.SetWidthHeight( playerAmmoTexture );
+            _ammo.SetX( player->GetX() + player->GetWidth() - 10);
+            _ammo.SetY( player->GetY() + (player->GetHeight() / 2 - _ammo.GetHeight() / 2) );
 
-            playerAmmoList.push_back( anAmmo );
+            playerAmmoList.push_back( _ammo );
 
             Mix_PlayChannel(CH_PLAYER, sound[SND_PLAYER_FIRE], 0);
 
@@ -322,13 +324,13 @@ static void doMouse(SDL_MouseButtonEvent* _event)
 {
     if(_event->button == SDL_BUTTON_LEFT && --player->reload <= 0) 
     {
-        Ammo anAmmo;
+        Ammo _ammo;
 
-        anAmmo.SetX( player->GetX() + 30 );
-        anAmmo.SetY( player->GetY() + 24 );
-        anAmmo.SetWidthHeight( playerAmmoTexture );
+        _ammo.SetX( player->GetX() + 30 );
+        _ammo.SetY( player->GetY() + 24 );
+        _ammo.SetWidthHeight( playerAmmoTexture );
 
-        playerAmmoList.push_back( anAmmo );
+        playerAmmoList.push_back( _ammo );
 
         Mix_PlayChannel(CH_PLAYER, sound[SND_PLAYER_FIRE], 0);
 
@@ -395,18 +397,18 @@ void doEnemy() {
     {
         if(--enemyList[i].reload < 0) 
         {
-            Ammo anAmmo;
+            Ammo _ammo;
 
-            anAmmo.SetX( enemyList[i].GetX() + 14);
-            anAmmo.SetY( enemyList[i].GetY() + 35);
-            anAmmo.SetWidthHeight( enemyAmmoTexture );
+            _ammo.SetX( enemyList[i].GetX() + 14);
+            _ammo.SetY( enemyList[i].GetY() + 35);
+            _ammo.SetWidthHeight( enemyAmmoTexture );
             
             float _x, _y;
             calcSlope(player->GetX(), player->GetY(), enemyList[i].GetX(), enemyList[i].GetY(), &_x, &_y);
-            anAmmo.SetXVal(_x * ENEMY_BULLET_SPEED);
-            anAmmo.SetYVal(_y * ENEMY_BULLET_SPEED);
+            _ammo.SetXVal(_x * ENEMY_BULLET_SPEED);
+            _ammo.SetYVal(_y * ENEMY_BULLET_SPEED);
 
-            enemyAmmoList.push_back( anAmmo );
+            enemyAmmoList.push_back( _ammo );
 
             enemyList[i].reload = 30 + rand() % FPS;
 
@@ -470,12 +472,12 @@ void updateEntity() {
         if(enemyList[i].GetHealth() <= 0) 
         {
             //explosion here
-            AnimateObject anExplosion;
+            AnimateObject _explosion;
 
-            anExplosion.SetX( enemyList[i].GetX() );
-            anExplosion.SetY( enemyList[i].GetY() );
-            anExplosion.SetRect(explosionTexture);
-            explosionList.push_back(anExplosion);
+            _explosion.SetX( enemyList[i].GetX() );
+            _explosion.SetY( enemyList[i].GetY() );
+            _explosion.SetRect(explosionTexture);
+            explosionList.push_back(_explosion);
 
             enemyList.erase(enemyList.begin() + i);
             i--;
@@ -590,24 +592,15 @@ void drawExplosion() {
     }
 }
 
-static void draw() 
-{
-    drawBackground();
-
-    drawPlayer();
-
-    drawEnemy();
-
-    drawAmmo();
-
-    //score
+static void drawScore() {
     SDL_Color textColor = {255, 255, 255};
     std::string aText = "Score: " + std::to_string(score);
     scoreTexture = loadTextTexture(aText, textColor, font);
     applyTexture(scoreTexture, SCREEN_WIDTH / 20, SCREEN_HEIGHT / 20);
+    SDL_DestroyTexture(scoreTexture);
+}
 
-
-    //lifepoint
+static void drawLifePoint() {
     for(int i = 0; i < player->GetHealth(); i++) 
     {
         SDL_Rect des;
@@ -618,8 +611,22 @@ static void draw()
 
         SDL_RenderCopy(renderer, lifepointTexture, NULL, &des);
     }
+}
 
-    //explosion
+static void draw() 
+{
+    drawBackground();
+
+    drawPlayer();
+
+    drawEnemy();
+
+    drawAmmo();
+
+    drawScore();
+
+    drawLifePoint();
+
     drawExplosion();
 }
 

@@ -1,8 +1,8 @@
 #ifndef AMMO_H_
 #define AMMO_H_
 
-#include "../header/header.h"
-#include "../header/baseObject.h"
+#include "header.h"
+#include "baseObject.h"
 
 class Ammo : public BaseObject 
 {

@@ -75,6 +75,7 @@ static void drawHighScoreBoard()
     std::string hsBoard = "- HIGH SCORE -";
     _texture = loadTextTexture(hsBoard, aColor, font);
     applyTexture(_texture, SCREEN_WIDTH / 3 + 40, SCREEN_HEIGHT / 6);
+    SDL_DestroyTexture(_texture);
 
     //titles
     for(int i = 0; i < 8; i++)
@@ -83,6 +84,8 @@ static void drawHighScoreBoard()
         _texture = loadTextTexture(hsBoard, aColor, font);
 
         applyTexture(_texture, SCREEN_WIDTH / 3, SCREEN_HEIGHT / 4 + 50 * i);
+
+        SDL_DestroyTexture(_texture);
     }
 
     hsBoard = "Hit SPACE to start a new game";

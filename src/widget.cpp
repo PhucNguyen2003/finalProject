@@ -31,23 +31,22 @@ static void initAudio()
     {
         //Play the music
         Mix_PlayMusic( music, -1 );
-        Mix_VolumeMusic(64);
+        Mix_VolumeMusic(32);
     }
 
     sound[SND_MOVE_CHOICE] = Mix_LoadWAV("res/sound/move_choice.wav");
-    // Mix_VolumeChunk(sound[SND_MOVE_CHOICE], 16);
+    Mix_VolumeChunk(sound[SND_MOVE_CHOICE], 16);
     if(sound[SND_MOVE_CHOICE] == NULL) 
     {
         quit = true;
     }
 
     sound[SND_CONFIRM_CHOICE] = Mix_LoadWAV("res/sound/confirm_choice.wav");
-    // Mix_VolumeChunk(sound[SND_CONFIRM_CHOICE], 16);
+    Mix_VolumeChunk(sound[SND_CONFIRM_CHOICE], 16);
     if(sound[SND_CONFIRM_CHOICE] == NULL) 
     {
         quit = true;
     }
-
 }
 
 static void init() 
@@ -67,6 +66,9 @@ static void clear() {
 
     quit = false;
     currentChoice = 0;
+
+    SDL_DestroyTexture(bkGround);
+    bkGround = NULL;
 }
 
 static void doKeydown(SDL_KeyboardEvent* _event) 
@@ -91,9 +93,7 @@ static void doKeydown(SDL_KeyboardEvent* _event)
 
         if(_event->keysym.sym == SDLK_ESCAPE ) 
         {
-            while(!gameStack.empty()) {
-                gameStack.pop();
-            }
+            gameStack.push(QUIT);
             quit = true;
         }
 
@@ -196,9 +196,15 @@ static void drawTitle()
     SDL_Texture* _texture = loadTextTexture(text, _color, titleFont);
     applyTexture(_texture, SCREEN_WIDTH / 4, SCREEN_HEIGHT / 4);
 
+    SDL_DestroyTexture(_texture);
+
     text = "- A BATTLE IN SPACE - ";
     _texture = loadTextTexture(text, _color, titleFont);
     applyTexture(_texture, SCREEN_WIDTH / 8, SCREEN_HEIGHT / 3);
+    SDL_DestroyTexture(_texture);
+
+    SDL_DestroyTexture(_texture);
+    _texture = NULL;
 }
 
 static void draw()

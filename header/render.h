@@ -1,7 +1,7 @@
 #ifndef RENDER_H_
 #define RENDER_H_
 
-#include "../header/header.h"
+#include "header.h"
 
 //handle rendering and fps cap
 
@@ -17,6 +17,6 @@ void renderRect(SDL_Texture *texture, SDL_Rect src, int x, int y);
 
 void capFrameRate(long *then, float *remainder);
 
-SDL_Texture* loadTextTexture( std::string textureText, SDL_Color textColor, TTF_Font* _font);
+SDL_Texture* loadTextTexture(std::string textureText, SDL_Color textColor, TTF_Font* _font);
 
 #endif

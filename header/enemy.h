@@ -1,8 +1,8 @@
 #ifndef ENEMY_H_
 #define ENEMY_H_
 
-#include "../header/header.h"
-#include "../header/baseObject.h"
+#include "header.h"
+#include "baseObject.h"
 
 class Enemy : public BaseObject {
 public:

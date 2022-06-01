@@ -5,7 +5,7 @@ OBJS = src/*.cpp
 CC = g++
 
 #INCLUDE_PATHS specifies the additional include paths we'll need
-INCLUDE_PATHS = -ISDL2\include
+INCLUDE_PATHS = -ISDL2\include -I header
 
 #LIBRARY_PATHS specifies the additional library paths we'll need
 LIBRARY_PATHS = -LSDL2\lib
