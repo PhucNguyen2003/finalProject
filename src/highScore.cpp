@@ -61,9 +61,22 @@ static void doInput() {
 	}
 }
 
+static void doHighScore() {
+    std::fstream _file;
+    _file.open("src/highScore.txt", std::ios::in);
+    if(_file.is_open()) {
+        for(int i = 0; i < 8; i++) {
+            _file >> highScoreList[i];
+        }
+    }
+    _file.close();
+}
+
 static void logic() 
 {
     doInput();
+
+    doHighScore();
 }
 
 static void drawHighScoreBoard() 
@@ -101,8 +114,6 @@ static void draw()
     applyTexture(bkGround, 0, 0);
 
     drawHighScoreBoard();
-
-
 }
 
 void highScore() 
