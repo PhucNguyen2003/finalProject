@@ -1,4 +1,4 @@
-#include "../header/utility.h"
+#include "utility.h"
 
 bool checkCollision(int x1, int y1, int w1, int h1, int x2, int y2, int w2, int h2)
 {
@@ -30,4 +30,12 @@ void calcSlope(int x1, int y1, int x2, int y2, float *xVal, float *yVal)
 
 	*yVal = (y1 - y2);
     *yVal /= steps;
+}
+
+bool findPoint(int x1, int y1, int x2, int y2, int x, int y)
+{
+    if (x > x1 && x < x2 && y > y1 && y < y2)
+        return true;
+ 
+    return false;
 }

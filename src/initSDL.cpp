@@ -1,4 +1,4 @@
-#include "../header/initSDL.h"
+#include "initSDL.h"
 
 SDL_Window* window;
 SDL_Renderer* renderer;
@@ -99,7 +99,7 @@ bool init()
 
 
     //hide cursor
-	SDL_ShowCursor(0);
+	// SDL_ShowCursor(0);
 
     return success;
 }

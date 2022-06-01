@@ -1,4 +1,4 @@
-#include "../header/spriteAnimate.h"
+#include "spriteAnimate.h"
 
 AnimateObject::AnimateObject() {
     src.x = 0;

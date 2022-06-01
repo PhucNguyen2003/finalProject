@@ -1,7 +1,7 @@
-#include "../header/header.h"
+#include "header.h"
 
-#include "../header/initSDL.h"      //init SDL2
-#include "../header/gameStack.h"    //run the whole game
+#include "initSDL.h"      //init SDL2
+#include "gameStack.h"    //run the whole game
 
 int main(int argv, char* argc[])
 {

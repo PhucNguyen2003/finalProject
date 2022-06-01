@@ -1,4 +1,4 @@
-#include "../header/enemy.h"
+#include "enemy.h"
 
 Enemy::Enemy() 
 {   

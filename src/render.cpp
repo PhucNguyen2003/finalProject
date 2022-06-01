@@ -1,4 +1,4 @@
-#include "../header/render.h"
+#include "render.h"
 
 void prepareScene()
 {

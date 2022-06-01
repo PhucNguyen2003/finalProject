@@ -1,8 +1,9 @@
-#include "../header/widget.h"
+#include "widget.h"
 
-#include "../header/header.h"
-#include "../header/render.h"
-#include "../header/gameStack.h"
+#include "header.h"
+#include "render.h"
+#include "gameStack.h"
+#include "utility.h"
 
 const int MAX_CHOICE = 4;
 
@@ -109,7 +110,36 @@ static void doKeydown(SDL_KeyboardEvent* _event)
 
 static void doMouse(SDL_MouseButtonEvent* _event) 
 {
+    int _x, _y;
+    SDL_GetMouseState(&_x, &_y);
 
+    //game
+    if(findPoint(640, 470, 971, 492, _x, _y)) {
+        currentChoice = 0;
+        doChoice = true;
+        quit = true;
+    }
+
+    //high score
+    if(findPoint(664, 520, 996, 542, _x, _y)) {
+        currentChoice = 1;
+        doChoice = true;
+        quit = true;
+    }
+
+    //credit
+    if(findPoint(640, 570, 877, 592, _x, _y)) {
+        currentChoice = 2;
+        doChoice = true;
+        quit = true;
+    }
+
+    //quit
+    if(findPoint(664, 620, 972, 642, _x, _y)) {
+        currentChoice = 3;
+        doChoice = true;
+        quit = true;
+    }
 }
 
 static void doInput() 
@@ -148,21 +178,29 @@ static void logic()
     if(buttonChosen[GAME] && doChoice) 
     {
         gameStack.push(GAME);
+
+        Mix_PlayChannel(CH_ANY, sound[SND_CONFIRM_CHOICE], 0);
     }
 
     if(buttonChosen[HIGH_SCORE] && doChoice) 
     {
         gameStack.push(HIGH_SCORE);
+
+        Mix_PlayChannel(CH_ANY, sound[SND_CONFIRM_CHOICE], 0);
     }
 
     if(buttonChosen[CREDIT] && doChoice) 
     {
         gameStack.push(CREDIT);
+
+        Mix_PlayChannel(CH_ANY, sound[SND_CONFIRM_CHOICE], 0);
     }
 
     if(buttonChosen[QUIT] && doChoice) 
     {
         gameStack.push(QUIT);
+
+        Mix_PlayChannel(CH_ANY, sound[SND_CONFIRM_CHOICE], 0);
     }
     
     doChoice = false;
@@ -235,7 +273,6 @@ void menu()
         logic();
 
         draw();
-
 
 		presentScene();
         capFrameRate(&then, &remainder);

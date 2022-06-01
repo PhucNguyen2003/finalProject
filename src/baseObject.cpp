@@ -1,4 +1,4 @@
-#include "../header/baseObject.h"
+#include "baseObject.h"
 
 BaseObject::BaseObject()
 {

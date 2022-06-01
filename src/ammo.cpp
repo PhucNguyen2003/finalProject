@@ -1,4 +1,4 @@
-#include "../header/ammo.h"
+#include "ammo.h"
 
 Ammo::Ammo() 
 {

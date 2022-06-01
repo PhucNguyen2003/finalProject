@@ -1,8 +1,8 @@
-#include "../header/highScore.h"
+#include "highScore.h"
 
-#include "../header/header.h"
-#include "../header/gameStack.h"
-#include "../header/render.h"
+#include "header.h"
+#include "gameStack.h"
+#include "render.h"
 
 static bool quit = false;
 

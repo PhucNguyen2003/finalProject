@@ -1,14 +1,14 @@
-#include "../header/game.h"
+#include "game.h"
 
-#include "../header/header.h"
-#include "../header/render.h"
-#include "../header/player.h"
-#include "../header/enemy.h"
-#include "../header/ammo.h"
-#include "../header/utility.h"
-#include "../header/spriteAnimate.h"
-#include "../header/gameStack.h"
-#include "../header/highScore.h"
+#include "header.h"
+#include "render.h"
+#include "player.h"
+#include "enemy.h"
+#include "ammo.h"
+#include "utility.h"
+#include "spriteAnimate.h"
+#include "gameStack.h"
+#include "highScore.h"
 
 //game var defintion
 static bool quit = false;
@@ -186,7 +186,8 @@ void spawnEnemy()
 
         enemyList.push_back( _enemy );
 
-		enemySpawnTimer = 30 + (rand() % ( FPS * 2 ) );
+		enemySpawnTimer = 30 + (rand() % ( FPS * 2 ) ) - score / 1000;
+        if(enemySpawnTimer < 0) enemySpawnTimer = 10;
 	}
 }
 
@@ -277,7 +278,7 @@ static void doKeydown(SDL_KeyboardEvent* _event)
             player->SetXVal( PLAYER_SPEED );
         }
 
-        if(_event->keysym.sym == SDLK_SPACE && --player->reload <= 0) 
+        if(_event->keysym.sym == SDLK_SPACE && player->reload <= 0) 
         {
             Ammo _ammo;
 
@@ -289,7 +290,7 @@ static void doKeydown(SDL_KeyboardEvent* _event)
 
             Mix_PlayChannel(CH_PLAYER, sound[SND_PLAYER_FIRE], 0);
 
-            player->reload = FPS / 10;
+            player->reload = FPS / 3;
         }
     }
 }
@@ -322,7 +323,7 @@ static void doKeyup(SDL_KeyboardEvent* _event)
 
 static void doMouse(SDL_MouseButtonEvent* _event) 
 {
-    if(_event->button == SDL_BUTTON_LEFT && --player->reload <= 0) 
+    if(_event->button == SDL_BUTTON_LEFT && player->reload <= 0) 
     {
         Ammo _ammo;
 
@@ -334,7 +335,7 @@ static void doMouse(SDL_MouseButtonEvent* _event)
 
         Mix_PlayChannel(CH_PLAYER, sound[SND_PLAYER_FIRE], 0);
 
-        player->reload = FPS / 10;
+        player->reload = FPS / 3;
     }
 }
 
@@ -343,10 +344,7 @@ static void doInput() {
 	{
 		if(event.type == SDL_QUIT) 
         {
-            while(!gameStack.empty()) 
-            {
-                gameStack.pop();
-            }
+            gameStack.push(QUIT);
             quit = true;
         }
 
@@ -368,10 +366,8 @@ static void doInput() {
 }
 
 void doPlayer() {
-    
-    if(player->reload > 0) 
-    {
-        player->reload--;
+    if(--player->reload <= 0) {
+        player->reload = 0;
     }
 
     player->HandleMove();

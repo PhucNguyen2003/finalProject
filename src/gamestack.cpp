@@ -1,9 +1,9 @@
-#include "../header/gameStack.h"
+#include "gameStack.h"
 
-#include "../header/widget.h"
-#include "../header/game.h"
-#include "../header/highScore.h"
-#include "../header/credit.h"
+#include "widget.h"
+#include "game.h"
+#include "highScore.h"
+#include "credit.h"
 
 std::stack<int> gameStack;
 
@@ -22,7 +22,7 @@ void doStack() {
     {
         gameStack.pop();
         game();
-        if(!gameStack.empty()) 
+        if(!gameStack.empty() && gameStack.top() != QUIT) 
         {
             highScore();
         }
