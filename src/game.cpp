@@ -292,6 +292,10 @@ static void doKeydown(SDL_KeyboardEvent* _event)
 
             player->reload = FPS / 3;
         }
+
+        if(_event->keysym.sym == SDLK_ESCAPE ) {
+            quit = true;
+        }
     }
 }
 
